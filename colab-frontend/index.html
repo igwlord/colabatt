@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self';">
+  <base href="/">
+  <title>CoLab Hub — AT&T TSI</title>
+  <meta name="description" content="Resource Hub - Plataforma Colaborativa de Marketplace para Técnicos AT&T TSI">
+
+  <!-- Fonts (CDN for dev — replace with self-hosted woff2 for production) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/utilities.css">
+
+  <!-- Component Styles -->
+  <link rel="stylesheet" href="css/components/button.css">
+  <link rel="stylesheet" href="css/components/badge.css">
+  <link rel="stylesheet" href="css/components/chip.css">
+  <link rel="stylesheet" href="css/components/card.css">
+  <link rel="stylesheet" href="css/components/kpi-card.css">
+  <link rel="stylesheet" href="css/components/opportunity-card.css">
+  <link rel="stylesheet" href="css/components/team-card.css">
+  <link rel="stylesheet" href="css/components/dependency-card.css">
+  <link rel="stylesheet" href="css/components/progress-bar.css">
+  <link rel="stylesheet" href="css/components/avatar.css">
+  <link rel="stylesheet" href="css/components/modal.css">
+  <link rel="stylesheet" href="css/components/input.css">
+  <link rel="stylesheet" href="css/components/toggle.css">
+  <link rel="stylesheet" href="css/components/filter-bar.css">
+  <link rel="stylesheet" href="css/components/alert-banner.css">
+  <link rel="stylesheet" href="css/components/notification-panel.css">
+  <link rel="stylesheet" href="css/components/copilot-panel.css">
+  <link rel="stylesheet" href="css/components/postularme-modal.css">
+</head>
+<body>
+  <a href="#page-content" class="skip-link">Saltar al contenido</a>
+
+  <!-- Top Navigation Bar -->
+  <header id="top-nav" role="banner"></header>
+
+  <!-- Side Navigation Bar -->
+  <aside id="side-nav" role="navigation" aria-label="Navegación principal"></aside>
+
+  <!-- Main Content Area -->
+  <main id="page-content" role="main" aria-live="polite"></main>
+
+  <!-- Modal Container — aria-modal y role="dialog" se aplican al abrir vía JS -->
+  <div id="modal-root" aria-hidden="true"></div>
+
+  <!-- Toast Container -->
+  <div id="toast-root" role="status" aria-live="polite"></div>
+
+  <!-- App Entry -->
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+/* ── Progress Bar ── */
+.progress {
+  height: 6px;
+  background: var(--surface-lowest);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress__fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width var(--ease-smooth);
+}
+
+/* Color variants */
+.progress__fill--primary { background: var(--primary); }
+.progress__fill--secondary { background: var(--secondary); }
+.progress__fill--tertiary { background: var(--tertiary); }
+.progress__fill--error { background: var(--error); }
+.progress__fill--success { background: var(--success); }
+.progress__fill--warning { background: var(--warning); }
+
+.progress__fill--gradient {
+  background: linear-gradient(90deg, var(--primary), var(--primary-container));
+}
+
+/* Pulsing (for vacancies) */
+.progress__fill--pulse {
+  background: color-mix(in srgb, var(--error) 20%, transparent);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

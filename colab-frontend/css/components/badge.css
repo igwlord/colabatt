@@ -1,0 +1,71 @@
+/* ── Badge Component ── */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: 2px var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.badge__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+}
+
+/* Variants */
+.badge--urgente {
+  background: color-mix(in srgb, var(--error) 10%, transparent);
+  color: var(--error);
+}
+.badge--urgente .badge__dot { background: var(--error); }
+
+.badge--normal {
+  background: color-mix(in srgb, var(--secondary-container) 10%, transparent);
+  color: var(--secondary-container);
+}
+.badge--normal .badge__dot { background: var(--secondary-container); }
+
+.badge--critico {
+  background: color-mix(in srgb, var(--error-container) 20%, transparent);
+  color: var(--error);
+}
+.badge--critico .badge__dot { background: var(--error); }
+
+.badge--success {
+  background: color-mix(in srgb, var(--success) 15%, transparent);
+  color: var(--success);
+}
+.badge--success .badge__dot { background: var(--success); }
+
+.badge--warning {
+  background: color-mix(in srgb, var(--warning) 15%, transparent);
+  color: var(--warning);
+}
+.badge--warning .badge__dot { background: var(--warning); }
+
+.badge--info {
+  background: color-mix(in srgb, var(--info) 15%, transparent);
+  color: var(--info);
+}
+.badge--info .badge__dot { background: var(--info); }
+
+.badge--on-track {
+  background: color-mix(in srgb, var(--primary) 20%, transparent);
+  color: var(--primary);
+}
+
+.badge--delayed {
+  background: color-mix(in srgb, var(--error) 20%, transparent);
+  color: var(--error);
+}
+
+.badge--completed {
+  background: color-mix(in srgb, var(--success) 15%, transparent);
+  color: var(--success);
+}

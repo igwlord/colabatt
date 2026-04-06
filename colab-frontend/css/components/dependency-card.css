@@ -1,0 +1,113 @@
+/* ── Dependency Card ── */
+.dep-card {
+  background: var(--surface-container);
+  border-radius: var(--radius-md);
+  padding: var(--space-5);
+  transition: all var(--ease-smooth);
+  cursor: pointer;
+}
+.dep-card:hover {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 12%, transparent);
+}
+
+.dep-card__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-4);
+}
+
+.dep-card__header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.dep-card__icon-wrap {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dep-card__icon-wrap .material-symbols-outlined {
+  color: var(--primary);
+}
+
+.dep-card__title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-bold);
+  color: white;
+}
+
+.dep-card__task-id {
+  font-size: var(--text-2xs);
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: var(--weight-bold);
+  color: var(--on-surface-variant);
+}
+
+.dep-card__description {
+  font-size: var(--text-xs);
+  color: var(--on-surface-variant);
+  line-height: 1.6;
+  margin-bottom: var(--space-6);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Progress */
+.dep-card__progress {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.dep-card__progress-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--text-2xs);
+  font-weight: var(--weight-bold);
+}
+.dep-card__progress-label {
+  text-transform: uppercase;
+  color: var(--on-surface-variant);
+}
+.dep-card__progress-value { color: white; }
+
+/* Footer */
+.dep-card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--space-4);
+}
+
+.dep-card__avatars {
+  display: flex;
+}
+.dep-card__avatars img {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--surface-container);
+  margin-left: -8px;
+  object-fit: cover;
+}
+.dep-card__avatars img:first-child { margin-left: 0; }
+
+.dep-card__date {
+  font-size: var(--text-2xs);
+  font-family: var(--font-mono);
+  color: var(--on-surface-variant);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+.dep-card__date .material-symbols-outlined { font-size: 14px; }

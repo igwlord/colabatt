@@ -1,0 +1,9 @@
+/* ── Base Card ── */
+.card {
+  background: var(--surface-container);
+  border-radius: var(--radius-md);
+  transition: all var(--ease-smooth);
+}
+.card:hover {
+  box-shadow: 0 0 0 1px color-mix(in srgb, var(--primary) 12%, transparent);
+}
