@@ -13,7 +13,7 @@ export const teamMembers = [
     status: 'busy',
     availableHours: 4,
     totalHours: 40,
-    skills: ['BGP/OSPF', 'Cisco Core', '5G Slicing'],
+    skills: ['Redes', '5G', 'Linux', 'Ciberseguridad', 'Security', 'Ansible'],
   },
   {
     id: 'tech-002',

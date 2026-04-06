@@ -67,7 +67,16 @@
 }
 
 .notification-panel__item--unread {
-  background: color-mix(in srgb, var(--primary) 5%, transparent);
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  border-left: 3px solid var(--primary);
+  padding-left: calc(var(--space-5) - 3px);
+}
+
+.notification-panel__item:not(.notification-panel__item--unread) {
+  opacity: 0.65;
+}
+.notification-panel__item:not(.notification-panel__item--unread):hover {
+  opacity: 1;
 }
 
 .notification-panel__icon {

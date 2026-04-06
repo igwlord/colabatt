@@ -37,6 +37,7 @@ export function openModal({ title, bodyHtml, footerHtml, size = 'md' }) {
     </div>
   `;
 
+  root.classList.add('active');
   root.setAttribute('aria-hidden', 'false');
   document.body.style.overflow = 'hidden';
 
@@ -47,6 +48,7 @@ export function openModal({ title, bodyHtml, footerHtml, size = 'md' }) {
   const previousFocus = document.activeElement;
 
   function close() {
+    root.classList.remove('active');
     root.innerHTML = '';
     root.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
@@ -83,6 +85,7 @@ export function openModal({ title, bodyHtml, footerHtml, size = 'md' }) {
 export function closeModal() {
   const root = document.getElementById('modal-root');
   if (root) {
+    root.classList.remove('active');
     root.innerHTML = '';
     root.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';

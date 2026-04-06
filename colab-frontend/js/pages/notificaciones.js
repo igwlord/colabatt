@@ -26,9 +26,11 @@ export function Notificaciones(container, ctx) {
 
   function render() {
     const unread = notifications.filter(n => !n.read);
-    const today = notifications.filter(n => n.date === '2026-03-29');
-    const yesterday = notifications.filter(n => n.date === '2026-03-28');
-    const older = notifications.filter(n => n.date !== '2026-03-29' && n.date !== '2026-03-28');
+    const todayStr = new Date().toISOString().slice(0, 10);
+    const yesterdayStr = new Date(Date.now() - 864e5).toISOString().slice(0, 10);
+    const today = notifications.filter(n => n.date === todayStr);
+    const yesterday = notifications.filter(n => n.date === yesterdayStr);
+    const older = notifications.filter(n => n.date < yesterdayStr);
 
     container.innerHTML = `
       <div style="padding: 0;">

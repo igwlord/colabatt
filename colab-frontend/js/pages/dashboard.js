@@ -52,7 +52,7 @@ export function Dashboard(container, ctx) {
 
         <!-- KPIs -->
         <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); margin-bottom: var(--space-8);">
-          ${data.kpis.map(k => kpiCard(k)).join('')}
+          ${(data.kpis || []).map(k => kpiCard(k)).join('')}
         </div>
 
         <!-- Two columns: Projects + Activity -->
@@ -68,7 +68,9 @@ export function Dashboard(container, ctx) {
               <button data-action="go" data-link="/tecnico/mis-proyectos" style="font-size: 10px; color: var(--primary); background: none; border: none; cursor: pointer; font-family: var(--font-mono); text-transform: uppercase;">Ver todos →</button>
             </div>
             <div style="display: flex; flex-direction: column; gap: var(--space-4);">
-              ${data.activeProjects.map(p => projectMini(p)).join('')}
+              ${!data.activeProjects?.length
+                ? `<p style="color:var(--on-surface-variant);font-size:var(--text-sm);padding:var(--space-4);">Sin proyectos activos</p>`
+                : data.activeProjects.map(p => projectMini(p)).join('')}
             </div>
           </div>
 
@@ -82,7 +84,9 @@ export function Dashboard(container, ctx) {
               <button data-action="go" data-link="/tecnico/notificaciones" style="font-size: 10px; color: var(--primary); background: none; border: none; cursor: pointer; font-family: var(--font-mono); text-transform: uppercase;">Ver todas →</button>
             </div>
             <div style="display: flex; flex-direction: column; gap: var(--space-3);">
-              ${data.recentActivity.map(a => activityItem(a)).join('')}
+              ${!data.recentActivity?.length
+                ? `<p style="color:var(--on-surface-variant);font-size:var(--text-sm);padding:var(--space-4);">Sin actividad reciente</p>`
+                : data.recentActivity.map(a => activityItem(a)).join('')}
             </div>
           </div>
         </div>

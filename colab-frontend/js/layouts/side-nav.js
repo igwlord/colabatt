@@ -144,7 +144,7 @@ export function renderSideNav(container) {
       if (role === 'manager' || role === 'admin') {
         navigate('/manager/nueva-necesidad');
       } else {
-        navigate('/tecnico/mis-proyectos');
+        navigate('/tecnico/oportunidades');
       }
     }
   }
