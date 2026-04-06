@@ -62,7 +62,7 @@ export function TechDashboard(container, ctx) {
     const statusColor = user.status === 'free' ? 'var(--success)'
       : user.status === 'partial' ? 'var(--warning)'
       : 'var(--error)';
-    const statusLabel = user.status === 'free' ? 'Libre'
+    const statusLabel = user.status === 'free' ? 'Disponible'
       : user.status === 'partial' ? 'Parcial'
       : 'Ocupado';
 
